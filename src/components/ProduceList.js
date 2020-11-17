@@ -271,7 +271,6 @@ const availableProduce = [
 ];
 
 function ProduceList() {
-
   return (
     <React.Fragment>
       {availableProduce.map((produce, index) =>
