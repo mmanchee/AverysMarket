@@ -1,6 +1,28 @@
 import React from "react";
-import Produce from "./ProduceList";
+import Produce from "./Produce";
 
+class ProduceList {
+  constructor() {
+     this.state = {
+      name: "React"
+    };
+  }
+
+
+  render() {
+    return (
+      <React.Fragment>
+        {availableProduce.map((produce, index) =>
+        <Produce
+          selection = {produce.selection.map((item, index) => 
+            <li>{item}</li>
+          )}
+        months = {Produce.month}/>
+        )}
+      </React.Fragment>
+    );
+  }
+}
 const availableProduce = [  
   {  
      month: "January",
@@ -271,18 +293,19 @@ const availableProduce = [
 ];
 
 function ProduceList() {
+
   return (
     <React.Fragment>
-  {ProduceList.map((Produce, index) =>
-  <Produce 
-    {...selection.map((item) => 
-      <p>{item}</p>
-    )}
-    months = {Produce.month}/>
-  )}
-      
+      {availableProduce.map((produce, index) =>
+      <Produce
+        selection = {produce.selection.map((item, index) => 
+          <li>{item}</li>
+        )}
+      months = {Produce.month}/>
+      )}
     </React.Fragment>
   );
 }
+
 
 export default ProduceList;
