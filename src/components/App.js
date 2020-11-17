@@ -6,17 +6,19 @@ import ProduceList from "./ProduceList";
 function App() {
   return (
     <React.Fragment>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-1-12">
-            
+      <div className="container">
+        <div className="row">
+          <div className="col-6">
+          <ScheduleList />
           </div>
-          
+          <div className="col-6">
+          <Months />
+            </div>
+        </div>
+        <div className='row'>
+        <ProduceList />
         </div>
       </div>
-      <ScheduleList />
-      <Months />
-      <ProduceList />
     </React.Fragment>
   );
 }

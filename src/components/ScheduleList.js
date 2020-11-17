@@ -39,4 +39,12 @@ const marketSchedule = [
   }
  ];
 
- export default ScheduleList;
+  function ScheduleList() {
+    return (
+      <React.Fragment>
+        
+      </React.Fragment>
+    );
+  }
+
+  export default ScheduleList;
