@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 function Produce(props) {
   return (
     <React.Fragment>
-
       <p className='display-4'>{props.month}</p>
       <ul>
         <li>{props.selection}</li>
