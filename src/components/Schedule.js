@@ -5,10 +5,12 @@ import PropTypes from "prop-types";
 function Schedule(props) {
   return (
     <React.Fragment>
-      <p>{props.day}</p>
-      <p>{props.location}</p>
-      <p>{props.hours}</p>
-      <p>{props.booth}</p>
+      <di class="col-3 spacer">
+        <h3> {props.day}</h3>
+        <p>Location: {props.location}</p>
+        <p>Hours: {props.hours}</p>
+        <p>Booth Number:{props.booth}</p>
+      </di>
     </React.Fragment>
   );
 }

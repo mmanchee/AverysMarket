@@ -20,18 +20,18 @@ class ToggleControl extends React.Component {
    render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.fromVisibleOnPage) {
-      currentVisibleState = <ProduceList />
+    if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <div class="row"><ProduceList /></div>
       buttonText = "Schedule";
 
     } else {
-      currentlyVisibleState = <ScheduleList />
+      currentlyVisibleState = <div class="row"><ScheduleList /></div>
       buttonText = "Produce";
     }
     return (
       <React.Fragment>
+        <button className='btn btn-success' onClick={this.handleClick}>{buttonText}</button>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }

@@ -273,12 +273,12 @@ const availableProduce = [
 function ProduceList() {
   return (
     <React.Fragment>
-      {availableProduce.map((produce, index) =>
-      <Produce
-        selection = {produce.selection.map((item, index) => 
-          <li>{item}</li>
-        )}
-      months = {Produce.month}/>
+        {availableProduce.map((produce, index) =>
+        <Produce
+          month = {produce.month}
+          selection = {produce.selection.map((item, index) => 
+            <li>{item}</li>
+          )} />
       )}
     </React.Fragment>
   );
